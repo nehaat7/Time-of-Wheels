@@ -31,8 +31,8 @@ Spin the wheel to get a random game, app, or topic to build, with steps, a twist
 You don't need to install or build anything. Download or clone the repo and open `index.html` in a browser.
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/time-of-wheels.git
-cd time-of-wheels
+git clone https://github.com/nehaat7/Time-of-Wheels.git
+cd Time-of-Wheels
 open index.html   # macOS. On Windows, double-click the file.
 ```
 
