@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Time of Wheels</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Time of <span>Wheels</span></h1>
+      <p class="tagline">Spin for a game, an app, or a topic. You get a build brief with steps, a twist, and a time limit. Then go make it.</p>
+    </div>
+    <button class="sound" id="sound" aria-pressed="true"><span class="dot"></span>Tick sound</button>
+  </header>
+
+  <div class="grid">
+    <section class="wheel-side" aria-label="Wheel">
+      <div class="tabs" role="tablist" id="tabs">
+        <button class="tab" role="tab" data-mode="game" id="tab-game">Games</button>
+        <button class="tab" role="tab" data-mode="app" id="tab-app">Apps</button>
+        <button class="tab" role="tab" data-mode="topic" id="tab-topic">Topics</button>
+        <button class="tab" role="tab" data-mode="custom" id="tab-custom">My wheel</button>
+      </div>
+      <div class="wheel-wrap" id="wrap">
+        <div class="pointer" id="pointer" aria-hidden="true">
+          <svg viewBox="0 0 34 44"><path d="M17 42 L3 8 A14 14 0 0 1 31 8 Z" fill="var(--rim)"/><circle cx="17" cy="11" r="4.5" fill="var(--bg)"/></svg>
+        </div>
+        <canvas id="wheel" aria-hidden="true"></canvas>
+        <button class="hub" id="hub" aria-label="Spin the wheel">SPIN</button>
+      </div>
+      <p class="hint">Tap the hub or press <kbd>Space</kbd></p>
+      <div class="custom" id="custom" hidden>
+        <label for="custom-items">Your wheel, one idea per line</label>
+        <textarea id="custom-items" spellcheck="false"></textarea>
+        <div class="row"><span id="custom-count"></span><button class="btn" id="custom-save">Update wheel</button></div>
+      </div>
+    </section>
+
+    <section class="brief-side" aria-live="polite">
+      <article class="card" id="card"></article>
+      <div class="history">
+        <h3>Recent spins</h3>
+        <ol id="history"></ol>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
