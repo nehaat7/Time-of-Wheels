@@ -2,7 +2,7 @@
 
 Spin the wheel to get a random game, app, or topic to build, with steps, a twist, and a time limit.
 
-**Play it:** https://YOUR-USERNAME.github.io/time-of-wheels/
+**Play it:** https://nehaat7.github.io/time-of-wheels/
 
 ## How it works
 
